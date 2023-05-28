@@ -7,7 +7,7 @@ import {
   LOADING_VIEW_STYLE_KEY,
   NEWS_SCREEN_STYLE_KEY,
   SEARCH_VIEW_STYLE_KEY,
-  SETTINGS_SCREEN_STYLE_KEY
+  SETTINGS_SCREEN_STYLE_KEY,
 } from "../util/constants";
 import { useContext } from "react";
 import { ThemeContext } from "../store/ThemeContext";
@@ -174,16 +174,12 @@ export const useStyles = () => {
   const settingsScreenStyles = StyleSheet.create({
     container: {
       width: "100%",
-      height:"100%",
-      textAlign: "center",
-      alignSelf: "center",
+      height: "100%",
+      alignSelf: "flex-start",
       backgroundColor: theme.screenBackground,
     },
-    languageChooserContainer: {
-      marginHorizontal:30,
-      marginTop:30,
-      marginBottom:100,
-      backgroundColor: theme.screenBackground,
+    buttonTitleStyle: {
+      margin: 20,
     },
   });
 
@@ -195,7 +191,6 @@ export const useStyles = () => {
   styles.set(NEWS_SCREEN_STYLE_KEY, newsListStyles);
   styles.set(SEARCH_VIEW_STYLE_KEY, searchViewStyle);
   styles.set(SETTINGS_SCREEN_STYLE_KEY, settingsScreenStyles);
-
 
   return styles;
 };

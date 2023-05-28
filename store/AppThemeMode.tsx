@@ -3,6 +3,7 @@ export type Theme = {
   color: string;
   screenBackground: string;
   cardBackground:string;
+  buttonColor:string;
 };
 
 type AppThemeMode = {
@@ -15,13 +16,15 @@ export const appThemeMode: AppThemeMode = {
     theme: "light",
     color: "black",
     screenBackground: "white",
-    cardBackground:'white'
+    cardBackground:'white',
+    buttonColor:'coral'
   },
   dark: {
     theme: "dark",
     color: "white",
     screenBackground: "black",
-    cardBackground:'coral'
+    cardBackground:'coral',
+    buttonColor:'coral'
   },
 };
 

@@ -19,14 +19,15 @@ const SettingsScreen = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.languageChooserContainer}>
+      <View style={styles.buttonTitleStyle}>
         <Button
           title={t("appStringsKeys.changeLngBtn")}
+          color={theme.buttonColor}
           onPress={() => {
             i18n
               .changeLanguage(i18n.language === "ar" ? "en" : "ar")
               .then(() => {
-                toggleDirection()
+                toggleDirection();
               })
               .catch((err) => {
                 console.log("something went wrong while applying RTL");
@@ -34,11 +35,13 @@ const SettingsScreen = () => {
           }}
         />
       </View>
-      <Button
-        onPress={toggle}
-        title={t("appStringsKeys.changeAppTheme")}
-        color={theme.color}
-      />
+      <View style={styles.buttonTitleStyle}>
+        <Button
+          onPress={toggle}
+          title={t("appStringsKeys.changeAppTheme")}
+          color={theme.buttonColor}
+        ></Button>
+      </View>
     </View>
   );
 };
