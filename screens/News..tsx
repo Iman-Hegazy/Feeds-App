@@ -14,7 +14,7 @@ import { NEWS_SCREEN_STYLE_KEY } from "../util/constants";
 import { useStyles } from "../styles/styles";
 
 type NewsScreenProps = NativeStackScreenProps<RootStackParamList, "News">;
-let timerId: Int32;
+let timerId: number | any = 0;
 
 const News: React.FC<NewsScreenProps> = ({
   navigation,
