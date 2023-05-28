@@ -11,7 +11,3 @@ export type NewModel = {
   url:string,
   onPress: () => void;
 };
-
-// export type NewsListModel = {
-//   newsList: NewModel[];
-// };
