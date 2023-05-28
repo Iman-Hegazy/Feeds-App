@@ -1,0 +1,12 @@
+{
+  "appStringsKeys": {
+    "settings": "Settings",
+    "feeds": "Feeds",
+    "newsDetails": "News Details",
+    "news": "News",
+    "changeAppTheme": "Change App Theme",
+    "changeLngBtn":"Change The App Language",
+    "back":"Back"
+
+  }
+}
