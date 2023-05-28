@@ -7,6 +7,8 @@
       "changeAppTheme": "تغير مظهر البدنامج",
       "changeLngBtn":"تغير لغه البرنامج",
       "back":"سابق",
-      "search":"ابحث"
+      "search":"ابحث",
+      "author":"المؤلف",
+      "description":"التفاصيل"
     }
   }

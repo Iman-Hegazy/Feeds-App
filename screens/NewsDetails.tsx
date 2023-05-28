@@ -7,6 +7,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Text, View, Image, Pressable } from "react-native";
 import { useStyles } from "../styles/styles";
 import { openInNewTab } from "../util/ExternalUrlNavigation";
+import { useTranslation } from "react-i18next";
 
 type NewsDetailsScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -17,6 +18,7 @@ const NewsDetails: React.FC<NewsDetailsScreenProps> = ({ route }) => {
   const imgUrl = route?.params?.urlToImage;
   const authorName = route?.params?.author ? route?.params?.author : "UnKnown";
   const newsDetailsStyle = useStyles().get(NEWS_ITEM_DETAILS_STYLE_KEY);
+  const {t} = useTranslation();
 
   function onNewsDetailsClick() {
     openInNewTab(route?.params.url);
@@ -41,9 +43,9 @@ const NewsDetails: React.FC<NewsDetailsScreenProps> = ({ route }) => {
             ellipsizeMode="tail"
             style={newsDetailsStyle.description}
           >
-            Description: {route?.params?.description}
+            {t("appStringsKeys.description")}: {route?.params?.description}
           </Text>
-          <Text style={newsDetailsStyle.description}>Author: {authorName}</Text>
+          <Text style={newsDetailsStyle.description}>{t("appStringsKeys.author")}: {authorName}</Text>
         </View>
       </View>
     </Pressable>
