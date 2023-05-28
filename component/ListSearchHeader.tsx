@@ -20,7 +20,7 @@ const ListSearchHeader: React.FC<Props> = ({
         autoCorrect={false}
         clearButtonMode="always"
         onChangeText={(queryText) => onListSearch(queryText)}
-        placeholder="Search"
+        placeholder="Searchh"
         style={styles.textInput}
       />
     </View>
